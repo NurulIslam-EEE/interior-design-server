@@ -25,6 +25,8 @@ async function run() {
             res.json(result)
             console.log(user);
         })
+
+        //add service
         app.post('/addServices', async (req, res) => {
             const user = req.body;
             const result = await servicesCollection.insertOne(user)
